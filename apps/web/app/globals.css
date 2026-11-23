@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* Aster design tokens. Each one becomes Tailwind classes:
+   --color-gold gives you text-gold, bg-gold, border-gold, and so on. */
+@theme {
+  /* night: the dark ground and its layers */
+  --color-night: #1a0b18;
+  --color-night-raised: #20101e;
+  --color-night-band: #24101f;
+  --color-line: #3a1f36;
+  --color-line-strong: #5a3553;
+
+  /* plum and gold: the brand colors */
+  --color-plum: #711466;
+  --color-mauve: #953567;
+  --color-gold: #e8cf6a;
+  --color-gold-light: #f6e6a6;
+  --color-ember: #e46a43;
+
+  /* text on the night ground, brightest to quietest */
+  --color-moon: #f2e7d3;
+  --color-haze: #d9c7d3;
+  --color-lilac: #c4aebe;
+  --color-dusk: #a890a2;
+
+  /* parchment: the light journal section */
+  --color-parchment: #f2e7d3;
+  --color-parchment-deep: #eadbc3;
+  --color-rule: #cdb9a6;
+  --color-ink: #2a1226;
+  --color-ink-soft: #5b3e55;
+  --color-rust: #c2410c;
+  --color-pebble: #a48e9c;
+
+  --font-display: "IM Fell English", Georgia, serif;
+  --font-serif: "Spectral", Georgia, serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-night);
+  color: var(--color-moon);
+  font-family: var(--font-serif);
+  font-weight: 300;
+}
+
+::selection {
+  background: var(--color-plum);
+  color: var(--color-moon);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}

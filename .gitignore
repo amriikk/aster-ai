@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+
+# build output
+.next/
+out/
+.turbo/
+*.tsbuildinfo
+next-env.d.ts
+
+# secrets: keep real values out of Git, but commit the example file
+.env*
+!.env.example
+
+# Vercel
+.vercel
+
+# macOS
+.DS_Store
+
+# logs
+npm-debug.log*

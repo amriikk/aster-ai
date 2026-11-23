@@ -12,8 +12,7 @@ Built in public by [Jhon Trujillo](https://jotrio.com). Live at [jotrio.com/aste
 
 ## Status
 
-In development. The landing page and waitlist come first, to see whether there's
-enough interest to build the app.
+In development. 
 
 | Milestone | Target |
 |---|---|
@@ -34,7 +33,7 @@ packages/
 ```
 
 - **Web:** Next.js (App Router), TypeScript, Tailwind CSS, hosted on Vercel
-- **Waitlist:** a Google Form for now
+- **Waitlist:**
 - **Planned:** Claude API readings with structured output, an Expo (React Native) iPhone app
   in `apps/mobile`
 
