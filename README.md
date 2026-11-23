@@ -51,8 +51,8 @@ Built in public. The landing page and waitlist come first, to test whether there
 
 <table>
   <tr>
-    <td width="68%"><img src="docs/aster-deck.png" alt="The deck section, with the Oros suit selected and its question shown"></td>
     <td><img src="docs/aster-phone.png" alt="The landing page on an iPhone-sized screen"></td>
+    <td width="68%"><img src="docs/aster-deck.png" alt="The deck section, with the Oros suit selected and its question shown"></td>
   </tr>
 </table>
 
