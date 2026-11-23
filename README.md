@@ -8,7 +8,7 @@ You ask a question in your own words, draw from the Dr. Moorne deck (*El Arte de
 
 Then Aster keeps the page, so you can see which cards and themes return over time.
 
-Built in public by [Jhon Trujillo](https://jotrio.com). Live at [jotrio.com/aster](https://jotrio.com/aster).
+Built in public by [Jhon Trujillo](https://jotrio.com). The live site is linked in this repo's About section.
 
 ## Status
 
@@ -27,9 +27,9 @@ A [Turborepo](https://turborepo.com) monorepo, so the website and the future iPh
 
 ```
 apps/
-  web/          Next.js landing page, served at jotrio.com/aster
+    web/          Next.js landing page and waitlist, hosted on Vercel
 packages/
-  deck/         Deck data (suits, themes, prompts) shared by every app
+    deck/         Deck data (suits, themes, prompts) shared by every app
 ```
 
 - **Web:** Next.js (App Router), TypeScript, Tailwind CSS, hosted on Vercel
