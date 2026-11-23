@@ -58,6 +58,46 @@ body {
   outline-offset: 3px;
 }
 
+/* Parallax. MotionDriver sets --scroll, --mx and --my on the page;
+   each layer sets its own --speed and --depth. */
+.parallax {
+  transform: translate3d(
+    calc(var(--mx, 0) * var(--depth, 0) * 1px),
+    calc(var(--scroll, 0) * var(--speed, 0) * -1px + var(--my, 0) * var(--depth, 0) * 1px),
+    0
+  );
+  will-change: transform;
+}
+
+/* The big star turns a little as you scroll, around its own center. */
+.parallax-spin {
+  transform: rotate(calc(var(--scroll, 0) * 0.05deg));
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* The word band slides sideways as you scroll past it. It holds three copies
+   of the words and starts one copy to the left, so it never runs out. */
+.parallax-band {
+  transform: translate3d(calc(-33.333% + var(--scroll, 0) * 0.3px), 0, 0);
+  will-change: transform;
+}
+
+/* The bright stars brighten and dim, each on its own beat. */
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.twinkle {
+  animation: twinkle 5s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -66,5 +106,6 @@ body {
   *::before,
   *::after {
     transition: none !important;
+    animation: none !important;
   }
 }
