@@ -1,1 +1,57 @@
-# aster-ai
+# Aster
+
+**Ask. Draw. Reflect.**
+
+Aster is an AI tarot journal. 
+
+You ask a question in your own words, draw from the Dr. Moorne deck (*El Arte de Echar las Cartas*) & get a reading written back to you. 
+
+Then Aster keeps the page, so you can see which cards and themes return over time.
+
+Built in public by [Jhon Trujillo](https://jotrio.com). Live at [jotrio.com/aster](https://jotrio.com/aster).
+
+## Status
+
+In development. The landing page and waitlist come first, to see whether there's
+enough interest to build the app.
+
+| Milestone | Target |
+|---|---|
+| Landing page and waitlist | December 2026 |
+| Working reading (web prototype) | March 2027 |
+| iPhone beta, including iPhone Duo layouts | May 2027 |
+| Public launch | Summer 2027 |
+
+## How it's built
+
+A [Turborepo](https://turborepo.com) monorepo, so the website and the future iPhone app can share code.
+
+```
+apps/
+  web/          Next.js landing page, served at jotrio.com/aster
+packages/
+  deck/         Deck data (suits, themes, prompts) shared by every app
+```
+
+- **Web:** Next.js (App Router), TypeScript, Tailwind CSS, hosted on Vercel
+- **Waitlist:** a Google Form for now
+- **Planned:** Claude API readings with structured output, an Expo (React Native) iPhone app
+  in `apps/mobile`
+
+## Run it locally
+
+Needs Node 24 (see `.nvmrc`).
+
+```bash
+npm install
+npm run dev
+```
+
+Then open [localhost:3000/aster](http://localhost:3000/aster).
+
+To test the waitlist, copy `apps/web/.env.example` to `apps/web/.env.local` and fill
+in the Google Form values.
+
+## Notes
+
+All artwork in this repo is original. Card meanings follow the Dr. Moorne deck.
